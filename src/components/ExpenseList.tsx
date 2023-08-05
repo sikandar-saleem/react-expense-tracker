@@ -13,7 +13,6 @@ interface Props {
 export default function ExpenseList({ expences, handleDelete }: Props) {
   return (
     <>
-      <h1 className="text-align-centre">Expense Tracker App</h1>
       <table className="table table-bordered">
         <thead>
           <tr>

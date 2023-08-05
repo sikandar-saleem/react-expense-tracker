@@ -18,10 +18,12 @@ function App() {
   return (
     <div>
       <div className="container mt-5">
+        <h1>My Expense Tracker</h1>
         <ExpenseFilter
           categories={["Food", "Diet", "Beauty", "Org"]}
           onSelectCategory={(category) => setSelectedCategory(category)}
         />
+        <br />
         <ExpenseList
           expences={visibleExpences}
           handleDelete={(id) =>
