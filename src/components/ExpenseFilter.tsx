@@ -11,7 +11,7 @@ export default function ExpenseFilter({ onSelectCategory }: Props) {
     >
       <option value="">Select Categories</option>
       {CATEGORIES.map((category) => (
-        <option id={category} value={category}>
+        <option key={category} id={category} value={category}>
           {category}
         </option>
       ))}
