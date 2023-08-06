@@ -3,8 +3,6 @@ import ExpenseList from "./components/ExpenseList";
 import ExpenseFilter from "./components/ExpenseFilter";
 import ExpenseForm from "./components/ExpenseForm";
 
-export const CATEGORIES = ["Food", "Diet", "Beauty", "Org"] as const;
-
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [expences, setExpences] = useState([
@@ -26,7 +24,11 @@ function App() {
           onSelectCategory={(category) => setSelectedCategory(category)}
         />
         <br />
-        <ExpenseForm />
+        <ExpenseForm
+          onSubmit={(expence) =>
+            setExpences([...expences, { ...expence, id: expences.length + 1 }])
+          }
+        />
         <br />
         <ExpenseList
           expences={visibleExpences}
