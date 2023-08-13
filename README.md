@@ -1,11 +1,11 @@
 # React + TypeScript + Vite
 
-# Node Version
+### Node Version
    `18.16.1`
 
-# NPM Version
+### NPM Version
    `9.5.1`
 
-# Scripts
+### Scripts
    `npm install`
    `npm run dev`
